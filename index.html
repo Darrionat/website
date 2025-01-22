@@ -13,7 +13,35 @@
   <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-
+    <script>
+      function toggleAbstracts() {
+        const abstracts = document.querySelectorAll('.abstract');
+        abstracts.forEach(abstract => {
+          abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
+        });
+      }
+    </script>
+    <style>
+      button {
+        color: black;
+        border: none;
+        border-radius: 5px;
+        padding: 3px 3px;
+        font-size: 12px;
+        font-family: 'Lato';
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 18px;
+      }
+  
+      button:hover {
+        background-color: #dbdbdb;
+      }
+  
+      button:active {
+        background-color: #9e9e9e;
+      }
+    </style>
 </head>
 
 <body>
@@ -41,7 +69,7 @@
 
                   <p style="text-align:center">
                     <a href="mailto:darrion.thornburgh@vanderbilt.edu">Email</a> &nbsp;/&nbsp;
-                    <a href="data/Darrion_Thornburgh__CV_Sep_2024.pdf">CV</a> &nbsp;/&nbsp;
+                    <a href="data/Darrion_Thornburgh__CV_Jan_2024.pdf">CV</a> &nbsp;/&nbsp;
                     <a href="https://linkedin.com/in/darrion-t">LinkedIn</a> &nbsp;/&nbsp;
                     <a href="https://github.com/darrionat/">GitHub</a> &nbsp;/&nbsp;
                     <a href="https://scholar.google.com/citations?user=j3RhNdAAAAAJ&hl=en&oi=ao">Google Scholar</a>
@@ -62,39 +90,17 @@
                 <td style="padding:20px;width:100%;vertical-align:middle">
                   <h2>Research</h2>
                   <p>
-                    I have a wide variety of interests, but the work that I have done lies in additive combinatorics,
-                    cryptography, affine geometry, and geometric group theory.
-                    During my last year at Bard, I wrote my senior thesis on APN functions, Sidon sets, and their
+                    I have a wide variety of interests, but the work that I have done primarily lies in additive
+                    combinatorics,
+                    cryptography, and affine geometry.
+                    In particular, I am interested in studying Sidon sets in finite Boolean groups, APN functions,
+                    linear codes, and graph-theoretical connections to these topics.
+                    During my last year at Bard, I wrote my senior thesis on Sidon sets, APN functions, and their
                     connections.
-                    Some of this work appears in my senior thesis done at Bard College, titled <em>Symmetry and
-                      Structures of APN Functions and Sidon Sets</em> and also my most recent paper, <em>Uniform exclue
-                      distributions of Sidon sets</em>.
-                  </p>
-                  <p>
-                    <i>REU 2023-2024</i>. I spent the summers of 2023 and 2024 participating in the <a
-                      href="https://margalit.droppages.net/reu.html">CUBE</a> REU
-                    (led by <a href="https://margalit.droppages.net/index.html">Dan
-                      Margalit</a>) at Georgia Tech and Vanderbilt
-                    University, repsectivley.
-                    The mentors of the projects I was involved in for CUBE (along with the year I worked in their
-                    project) were <a href="https://sites.google.com/site/wadebloomquist/">Wade Bloomquist</a> (2023), <a
-                      href="https://sites.google.com/view/ryandickmann">Ryan Dickmann</a> (2024),
-                    Dan Margalit (2023-2024), and <a href="https://sites.google.com/view/abdoul-karim-sane/">Abdoul
-                      Karim Sane</a> (2024).
-                    During my time at CUBE 2023 and 2024, we studied the hyperbolicity constant of the curve graph of a
-                    surface,
-                    right-angled Artin groups (RAAGs),
-                    and graph theoretical properties that are forbidden in any induced subgraph of the curve graph.
-                  </p>
-
-                  <p>
-                    <i>REU 2022</i>. During the summer of 2022, I did a summer of undergraduate research at the Bard
-                    Summer Research
-                    Institute (BSRI), under the mentorship of <a href="https://laurenrose.org/">Lauren Rose</a>.
-                    My research at the BSRI was in finite geometry and combinatorics and can be applied to the card game
-                    <a href="https://awm-math.org/publications/playing-cards/evenquads/">EvenQuads</a>.
-                    During this time, we completely classified the affine equivalence classes of Sidon sets (or 2-caps)
-                    in \(\mathbb{F}_2^n\) of size up to 9.
+                    Since then, I have written two seperate papers on Sidon sets in \(\mathbb{F}_2^n\), which you can
+                    find below.
+                    If you are interested in Sidon sets, APN functions, or any related research, feel free to contact me
+                    at my email above!
                   </p>
                 </td>
               </tr>
@@ -107,14 +113,50 @@
               <tr>
                 <td colspan="2">
                   <h3 style="padding-left: 20px;">Papers</h3>
+                  <button onclick="toggleAbstracts()">Hide/Show abstracts</button>
                 </td>
               </tr>
 
               <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/gold4.png" alt="successor" width="160">
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="https://arxiv.org/abs/2501.11184">
+                    <span class="papertitle">On generalizing cryptographic results to Sidon sets in
+                      \(\mathbb{F}_2^n\)</span>
+                  </a>
+                  <br>
+                  <strong>Darrion Thornburgh</strong>
+                  <br>
+                  <em>Prepint</em>, January 2025;
+                  <br>
+                  <a href="https://arxiv.org/abs/2501.11184">arXiv</a>
+                  <br>
+                  <div class="abstract">
+                  <p>
+                    A Sidon set \(S\) in \(\mathbb{F}_2^n\) is a set such that \(x+y=z+w\) has no solutions \(x,y,z,w \in S\) with
+                    \(x,y,z,w\) all distinct.
+                    In this paper, we prove various results on Sidon sets by using or generalizing known cryptographic
+                    results.
+                    In particular, we generalize known results on the Walsh transform of almost perfect nonlinear (APN)
+                    functions to Sidon sets.
+                    One such result is that we classify Sidon sets with minimal linearity as those that are \(k\)-covers.
+                    That is, Sidon sets with minimal linearity are those Sidon sets \(S \subseteq \mathbb{F}_2^n\) such that there
+                    exists \(k > 0\) such that for any \(p \in \mathbb{F}_2^n \setminus S\), there are exactly \(k\) subsets
+                    \(\{x,y,z\} \subseteq S\) such that \(x+y+z = p\).
+                    From this, we also classify \(k\)-covers by means of the Cayley graph of a particular Boolean
+                    function, and we construct the unique rank \(3\) strongly regular graph with parameters \((2048, 276,
+                    44, 36)\) as the Cayley graph of a Boolean function.
+                    Finally, by computing the linearity of a particular family of Sidon sets, we increase the best-known
+                    lower bound of the largest Sidon set in \(\mathbb{F}_2^{4t+1}\) by \(1\) for all \(t \geq 4\).
+                  </p>
+                </div>
                 </td>
-                <td width="75%" valign="middle">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <!-- <img src="images/gold4.png" alt="successor" width="160"> -->
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="https://arxiv.org/abs/2407.11783">
                     <span class="papertitle">Uniform exclude distributions of Sidon sets</span>
                   </a>
@@ -125,6 +167,7 @@
                   <br>
                   <a href="https://arxiv.org/abs/2407.11783">arXiv</a>
                   <br>
+                  <div class="abstract">
                   <p>
                     A Sidon set \(S\) in \(\mathbb{F}_2^n\) is a set such that the pairwise sums of distinct points are
                     all
@@ -146,15 +189,15 @@
                     \((\mathbb{F}_2^n)^2 \setminus S\) into \(2^n\) elements.
                     We use this result and a result of Carlet to determine exactly what values the exclude distributions
                     of the graphs of the Gold and Kasami functions take and how often they take these values.
-                  </p>
+                  </p></div>
+                </td>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/gold4.png" alt="successor" width="160">
                 </td>
               </tr>
 
               <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/gold_4_binary_image.png" alt="successor" width="160">
-                </td>
-                <td width="75%" valign="middle">
+                <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="data/Darrion_Thornburgh_SPROJ_Revised_051824.pdf">
                     <span class="papertitle">Symmetry and Structures of APN Functions and Sidon Sets</span>
                   </a>
@@ -164,6 +207,7 @@
                   <em>Undergraduate Thesis</em>, May 2024;
                   <br>
                   <a href="https://digitalcommons.bard.edu/senproj_s2024/292/">Bard Digital Commons</a>
+                  <div class="abstract">
                   <p>
                     Let \(\mathbb{F}_p^n\) be the \(n\)-dimensional vector space over \(\mathbb{F}_p\).
                     The graph \(\mathcal{G}_F = \{ (x, F(x)) : x \in \mathbb{F}_p^n \}\) of a vectorial function \(F
@@ -179,15 +223,15 @@
                     We also study the properties of \(\mathcal G_F\) as a Sidon set.
                     In particular, we introduce the notion of uniform exclude distributions, and we study APN functions
                     whose graphs have uniform exclude distributions.
-                  </p>
+                  </p></div>
+                </td>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/gold_4_binary_image.png" alt="successor" width="160">
                 </td>
               </tr>
 
               <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <!-- <img src="images/9-cap.png" alt="successor" width="160"> -->
-                </td>
-                <td width="75%" valign="middle">
+                <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="https://arxiv.org/abs/2310.17065">
                     <span class="papertitle">Topological methods in zero-sum Ramsey theorey</span>
                   </a>
@@ -199,6 +243,7 @@
                   <br>
                   <a href="https://arxiv.org/abs/2310.17065">arXiv</a>
                   <br>
+                  <div class="abstract">
                   <p>
                     A cornerstone result of Erdős, Ginzburg, and Ziv (EGZ) states that any sequence of
                     \(2n − 1\) elements in \(\mathbb{Z}/n\) contains a zero-sum subsequence of length \(n\). While
@@ -213,15 +258,16 @@
                     of the EGZ theorem with applications to balanced set families and (3) provide a constrained EGZ
                     theorem which imposes combinatorial restrictions on zero-sum sequences in the original result.
                   </p>
+                </div>
+                </td>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <!-- <img src="images/9-cap.png" alt="successor" width="160"> -->
                 </td>
               </tr>
 
 
               <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/QUADsDeck.png" alt="successor" width="160">
-                </td>
-                <td width="75%" valign="middle">
+                <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="https://link.springer.com/article/10.1007/s44007-023-00047-0">
                     <span class="papertitle">How Many Cards Should You Lay Out in a Game of <em>EvenQuads</em>: A
                       Detailed Study of Caps in AG(n,2)</span>
@@ -232,6 +278,7 @@
                   <br>
                   <em>La Matematica</em>, May 2023;
                   <br>
+                  <div class="abstract">
                   <p>
                     We define a cap in the affine geometry \(\mathrm{AG}(n,2)\) to be a subset in which any collection
                     of \(4\) points is
@@ -242,7 +289,11 @@
                     complete
                     and maximal caps. Since the EvenQuads card deck is a model for \(\mathrm{AG}(6,2)\), as a
                     consequence, we
-                    determine the probability that an arbitrary \(k\)-card layout contains a quad. </p>
+                    determine the probability that an arbitrary \(k\)-card layout contains a quad. </p></div>
+                </td>
+                
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="images/QUADsDeck.png" alt="successor" width="160">
                 </td>
               </tr>
             </tbody>
@@ -260,10 +311,8 @@
               </tr>
 
               <tr>
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <!-- <img src="" alt="successor" width="160"> -->
-                </td>
-                <td width="75%" valign="middle">
+
+                <td style="padding:20px;width:75%;vertical-align:middle">
                   <a href="https://darrionat.github.io/proset_vis/">
                     <span class="papertitle">Projective Set Visualizer (ProSet Vis)</span>
                   </a>
@@ -285,6 +334,9 @@
                       Visualizer</a> that aids in constructing cap sets in Projective Set.
                   </p>
                 </td>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <!-- <img src="" alt="successor" width="160"> -->
+                </td>
               </tr>
 
 
@@ -299,7 +351,7 @@
                 <td style="padding:0px">
                   <br>
                   <p style="text-align:right;font-size:small;">
-                    <a href="https://github.com/jonbarron/jonbarron_website">Template</a> by Jon Barron.
+                    <a href="https://github.com/jonbarron/jonbarron_website">Original template</a> by Jon Barron.
                   </p>
                 </td>
               </tr>
