@@ -13,35 +13,35 @@
   <script type="text/javascript" async
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-    <script>
-      function toggleAbstracts() {
-        const abstracts = document.querySelectorAll('.abstract');
-        abstracts.forEach(abstract => {
-          abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
-        });
-      }
-    </script>
-    <style>
-      button {
-        color: black;
-        border: none;
-        border-radius: 5px;
-        padding: 3px 3px;
-        font-size: 12px;
-        font-family: 'Lato';
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        margin-left: 18px;
-      }
-  
-      button:hover {
-        background-color: #dbdbdb;
-      }
-  
-      button:active {
-        background-color: #9e9e9e;
-      }
-    </style>
+  <script>
+    function toggleAbstracts() {
+      const abstracts = document.querySelectorAll('.abstract');
+      abstracts.forEach(abstract => {
+        abstract.style.display = abstract.style.display === 'none' ? 'block' : 'none';
+      });
+    }
+  </script>
+  <style>
+    button {
+      color: black;
+      border: none;
+      border-radius: 5px;
+      padding: 3px 3px;
+      font-size: 12px;
+      font-family: 'Lato';
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-left: 18px;
+    }
+
+    button:hover {
+      background-color: #dbdbdb;
+    }
+
+    button:active {
+      background-color: #9e9e9e;
+    }
+  </style>
 </head>
 
 <body>
@@ -113,7 +113,51 @@
               <tr>
                 <td colspan="2">
                   <h3 style="padding-left: 20px;">Papers</h3>
-                  <button onclick="toggleAbstracts()">Hide/Show abstracts</button>
+                  <button onclick="toggleAbstracts()">Compressed View</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="https://arxiv.org/abs/2509.02280">
+                    <span class="papertitle">On lower bounds for the distances between APN functions</span>
+                  </a>
+                  <br>
+                  Maria Mihaila and
+                  <strong>Darrion Thornburgh</strong>
+                  <br>
+                  <em>Prepint</em>, September 2025;
+                  <br>
+                  <a href="https://arxiv.org/abs/2509.02280">arXiv</a>
+                  <br>
+                  <div class="abstract">
+                    <p>
+                      Whether two distinct APN functions can have a Hamming distance of \(1\) remains an open problem.
+                      In 2020, L. Budaghyan et al. introduced a new CCZ-invariant \(\Pi_F\) which can be used to provide
+                      lower bounds on the Hamming distance between a given APN function \(F \colon \mathbb{F}_2^n \to
+                      \mathbb{F}_2^n\) and other APN functions.
+                      Lower bounds on the distance from an APN function \(F\) to any other are known for almost bent (AB)
+                      functions and when \(F\) is a 3-to-1 quadratic function with \(n\) even.
+                      In this paper, we reinterpret \(\Pi_F\) in terms of the exclude multiplicities of the graph
+                      \(\mathcal{G}_F=\{(x, F(x)) : x \in \mathbb{F}_2^n\}\) of \(F\) as a Sidon set.
+                      We establish lower bounds on the distance for even \(n\) when \(F\) is plateaued APN, generalize the
+                      known lower bounds for quadratic \(3\)-to-\(1\) function to all 3-to-1 plateaued functions (e.g.
+                      Kasami functions), and derive new lower bounds for when \(F\) is the APN inverse function over
+                      \(\mathbb{F}_{2^n}\) for \(n\) odd.
+                      We also study how the exclude multiplicities of \(\mathcal{G}_F\) are directly connected to the
+                      existence of linear structures of \(\gamma_F\) when \(F\) is plateaued and APN and the
+                      ortho-derivative when \(F\) is a quadratic APN function.
+                      We also use the CCZ-invariance of exclude multiplicities to prove that the
+                      Brinkmann-Leander-Edel-Pott function is not CCZ-equivalent to a plateaued function.
+                    </p>
+                  </div>
+                </td>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="abstract">
+                    <!-- <img src="images/Cayley_TableZ_2^10.png" alt="successor" width="160"> -->
+                    <!-- <small> The Cayley table of \(\mathbb{F}_2^n\) represents identifications in the Cayley graph of a -->
+                      <!-- Boolean function.</small> -->
+                  </div>
                 </td>
               </tr>
 
@@ -131,28 +175,38 @@
                   <a href="https://arxiv.org/abs/2501.11184">arXiv</a>
                   <br>
                   <div class="abstract">
-                  <p>
-                    A Sidon set \(S\) in \(\mathbb{F}_2^n\) is a set such that \(x+y=z+w\) has no solutions \(x,y,z,w \in S\) with
-                    \(x,y,z,w\) all distinct.
-                    In this paper, we prove various results on Sidon sets by using or generalizing known cryptographic
-                    results.
-                    In particular, we generalize known results on the Walsh transform of almost perfect nonlinear (APN)
-                    functions to Sidon sets.
-                    One such result is that we classify Sidon sets with minimal linearity as those that are \(k\)-covers.
-                    That is, Sidon sets with minimal linearity are those Sidon sets \(S \subseteq \mathbb{F}_2^n\) such that there
-                    exists \(k > 0\) such that for any \(p \in \mathbb{F}_2^n \setminus S\), there are exactly \(k\) subsets
-                    \(\{x,y,z\} \subseteq S\) such that \(x+y+z = p\).
-                    From this, we also classify \(k\)-covers by means of the Cayley graph of a particular Boolean
-                    function, and we construct the unique rank \(3\) strongly regular graph with parameters \((2048, 276,
-                    44, 36)\) as the Cayley graph of a Boolean function.
-                    Finally, by computing the linearity of a particular family of Sidon sets, we increase the best-known
-                    lower bound of the largest Sidon set in \(\mathbb{F}_2^{4t+1}\) by \(1\) for all \(t \geq 4\).
-                  </p>
-                </div>
+                    <p>
+                      A Sidon set \(S\) in \(\mathbb{F}_2^n\) is a set such that \(x+y=z+w\) has no solutions \(x,y,z,w
+                      \in S\) with
+                      \(x,y,z,w\) all distinct.
+                      In this paper, we prove various results on Sidon sets by using or generalizing known cryptographic
+                      results.
+                      In particular, we generalize known results on the Walsh transform of almost perfect nonlinear
+                      (APN)
+                      functions to Sidon sets.
+                      One such result is that we classify Sidon sets with minimal linearity as those that are
+                      \(k\)-covers.
+                      That is, Sidon sets with minimal linearity are those Sidon sets \(S \subseteq \mathbb{F}_2^n\)
+                      such that there
+                      exists \(k > 0\) such that for any \(p \in \mathbb{F}_2^n \setminus S\), there are exactly \(k\)
+                      subsets
+                      \(\{x,y,z\} \subseteq S\) such that \(x+y+z = p\).
+                      From this, we also classify \(k\)-covers by means of the Cayley graph of a particular Boolean
+                      function, and we construct the unique rank \(3\) strongly regular graph with parameters \((2048,
+                      276,
+                      44, 36)\) as the Cayley graph of a Boolean function.
+                      Finally, by computing the linearity of a particular family of Sidon sets, we increase the
+                      best-known
+                      lower bound of the largest Sidon set in \(\mathbb{F}_2^{4t+1}\) by \(1\) for all \(t \geq 4\).
+                    </p>
+                  </div>
                 </td>
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/Cayley_TableZ_2^10.png" alt="successor" width="160">
-                  <small> The Cayley table of \(\mathbb{F}_2^n\) represents identifications in the Cayley graph of a Boolean function.</small>
+                  <div class="abstract">
+                    <img src="images/Cayley_TableZ_2^10.png" alt="successor" width="160">
+                    <small> The Cayley table of \(\mathbb{F}_2^n\) represents identifications in the Cayley graph of a
+                      Boolean function.</small>
+                  </div>
                 </td>
               </tr>
 
@@ -169,32 +223,39 @@
                   <a href="https://arxiv.org/abs/2407.11783">arXiv</a>
                   <br>
                   <div class="abstract">
-                  <p>
-                    A Sidon set \(S\) in \(\mathbb{F}_2^n\) is a set such that the pairwise sums of distinct points are
-                    all
-                    distinct.
-                    The exclude points of a Sidon set \(S\) are the sums of three distinct points in \(S\), and the
-                    exclude
-                    multiplicity of a point in \(\mathbb{F}_2^n \setminus S\) is the number of such triples in \(S\) it
-                    is equal to.
-                    We call the function \(d_S \colon \mathbb{F}_2^n \setminus S \to \mathbb{Z}_{\geq 0}\) taking points
-                    in \(\mathbb{F}_2^n
-                    \setminus S\) to their exclude multiplicity the exclude distribution of \(S\).
-                    We say that \(d_S\) is uniform on \(\mathcal{P}\) if \(\mathcal{P}\) is an equally-sized partition
-                    \(\mathcal{P}\) of \(\mathbb{F}_2^n \setminus S\) such that \(d_S\) takes the same values an equal
-                    number of times
-                    on every element of \(\mathcal{P}\).
-                    In this paper, we use APN plateaued functions with all component functions unbalanced to construct
-                    Sidon sets \(S\) in \((\mathbb{F}_2^n)^2\) whose exclude distributions are uniform on natural
-                    partitions of
-                    \((\mathbb{F}_2^n)^2 \setminus S\) into \(2^n\) elements.
-                    We use this result and a result of Carlet to determine exactly what values the exclude distributions
-                    of the graphs of the Gold and Kasami functions take and how often they take these values.
-                  </p></div>
+                    <p>
+                      A Sidon set \(S\) in \(\mathbb{F}_2^n\) is a set such that the pairwise sums of distinct points
+                      are
+                      all
+                      distinct.
+                      The exclude points of a Sidon set \(S\) are the sums of three distinct points in \(S\), and the
+                      exclude
+                      multiplicity of a point in \(\mathbb{F}_2^n \setminus S\) is the number of such triples in \(S\)
+                      it
+                      is equal to.
+                      We call the function \(d_S \colon \mathbb{F}_2^n \setminus S \to \mathbb{Z}_{\geq 0}\) taking
+                      points
+                      in \(\mathbb{F}_2^n
+                      \setminus S\) to their exclude multiplicity the exclude distribution of \(S\).
+                      We say that \(d_S\) is uniform on \(\mathcal{P}\) if \(\mathcal{P}\) is an equally-sized partition
+                      \(\mathcal{P}\) of \(\mathbb{F}_2^n \setminus S\) such that \(d_S\) takes the same values an equal
+                      number of times
+                      on every element of \(\mathcal{P}\).
+                      In this paper, we use APN plateaued functions with all component functions unbalanced to construct
+                      Sidon sets \(S\) in \((\mathbb{F}_2^n)^2\) whose exclude distributions are uniform on natural
+                      partitions of
+                      \((\mathbb{F}_2^n)^2 \setminus S\) into \(2^n\) elements.
+                      We use this result and a result of Carlet to determine exactly what values the exclude
+                      distributions
+                      of the graphs of the Gold and Kasami functions take and how often they take these values.
+                    </p>
+                  </div>
                 </td>
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/gold4.png" alt="successor" width="160">
-                  <small> Some Sidon sets such as this one have local repetition in their exclude points.</small>
+                  <div class="abstract">
+                    <img src="images/gold4.png" alt="successor" width="160">
+                    <small> Some Sidon sets such as this one have local repetition in their exclude points.</small>
+                  </div>
                 </td>
               </tr>
 
@@ -210,26 +271,30 @@
                   <br>
                   <a href="https://digitalcommons.bard.edu/senproj_s2024/292/">Bard Digital Commons</a>
                   <div class="abstract">
-                  <p>
-                    Let \(\mathbb{F}_p^n\) be the \(n\)-dimensional vector space over \(\mathbb{F}_p\).
-                    The graph \(\mathcal{G}_F = \{ (x, F(x)) : x \in \mathbb{F}_p^n \}\) of a vectorial function \(F
-                    \colon
-                    \mathbb{F}_p^n \to \mathbb{F}_p^m\) can have interesting combinatorial properties depending on
-                    varying cryptographic conditions on \(F\).
-                    A vectorial Boolean function \(F \colon \mathbb{F}_2^n \to \mathbb{F}_2^n\) is almost perfect
-                    nonlinear (APN) if there are at most \(2\) solutions to the equation \(F(x+a) + F(x) = b\) for all
-                    \(a,b
-                    \in \mathbb{F}_2^n\) where \(a \neq 0\).
-                    In this paper, we classify APN functions and important subclasses of APN functions in graph
-                    theoretical terms using the Kneser graph of all translations of \(\mathcal G_F\).
-                    We also study the properties of \(\mathcal G_F\) as a Sidon set.
-                    In particular, we introduce the notion of uniform exclude distributions, and we study APN functions
-                    whose graphs have uniform exclude distributions.
-                  </p></div>
+                    <p>
+                      Let \(\mathbb{F}_p^n\) be the \(n\)-dimensional vector space over \(\mathbb{F}_p\).
+                      The graph \(\mathcal{G}_F = \{ (x, F(x)) : x \in \mathbb{F}_p^n \}\) of a vectorial function \(F
+                      \colon
+                      \mathbb{F}_p^n \to \mathbb{F}_p^m\) can have interesting combinatorial properties depending on
+                      varying cryptographic conditions on \(F\).
+                      A vectorial Boolean function \(F \colon \mathbb{F}_2^n \to \mathbb{F}_2^n\) is almost perfect
+                      nonlinear (APN) if there are at most \(2\) solutions to the equation \(F(x+a) + F(x) = b\) for all
+                      \(a,b
+                      \in \mathbb{F}_2^n\) where \(a \neq 0\).
+                      In this paper, we classify APN functions and important subclasses of APN functions in graph
+                      theoretical terms using the Kneser graph of all translations of \(\mathcal G_F\).
+                      We also study the properties of \(\mathcal G_F\) as a Sidon set.
+                      In particular, we introduce the notion of uniform exclude distributions, and we study APN
+                      functions
+                      whose graphs have uniform exclude distributions.
+                    </p>
+                  </div>
                 </td>
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/gold_4_binary_image.png" alt="successor" width="160">
-                  <small> The adjacency matrix of \(\overline{Cay(\gamma_F)}\) where \(F(x)=x^3\) and \(n=4\).</small>
+                  <div class="abstract">
+                    <img src="images/gold_4_binary_image.png" alt="successor" width="160">
+                    <small> The adjacency matrix of \(\overline{Cay(\gamma_F)}\) where \(F(x)=x^3\) and \(n=4\).</small>
+                  </div>
                 </td>
               </tr>
 
@@ -247,21 +312,21 @@
                   <a href="https://arxiv.org/abs/2310.17065">arXiv</a>
                   <br>
                   <div class="abstract">
-                  <p>
-                    A cornerstone result of Erdős, Ginzburg, and Ziv (EGZ) states that any sequence of
-                    \(2n − 1\) elements in \(\mathbb{Z}/n\) contains a zero-sum subsequence of length \(n\). While
-                    algebraic techniques
-                    have predominated in deriving many deep generalizations of this theorem over the past sixty years,
-                    here we introduce topological approaches to zero-sum problems which have proven fruitful in other
-                    combinatorial contexts. Our main result (1) is a topological criterion for determining when any
-                    \(\mathbb{Z}/n\)-
-                    coloring of an n-uniform hypergraph contains a zero-sum hyperedge. In addition to applications
-                    for Kneser hypergraphs, for complete hypergraphs our methods recover Olson’s generalization of
-                    the EGZ theorem for arbitrary finite groups. Furthermore, we (2) give a fractional generalization
-                    of the EGZ theorem with applications to balanced set families and (3) provide a constrained EGZ
-                    theorem which imposes combinatorial restrictions on zero-sum sequences in the original result.
-                  </p>
-                </div>
+                    <p>
+                      A cornerstone result of Erdős, Ginzburg, and Ziv (EGZ) states that any sequence of
+                      \(2n − 1\) elements in \(\mathbb{Z}/n\) contains a zero-sum subsequence of length \(n\). While
+                      algebraic techniques
+                      have predominated in deriving many deep generalizations of this theorem over the past sixty years,
+                      here we introduce topological approaches to zero-sum problems which have proven fruitful in other
+                      combinatorial contexts. Our main result (1) is a topological criterion for determining when any
+                      \(\mathbb{Z}/n\)-
+                      coloring of an n-uniform hypergraph contains a zero-sum hyperedge. In addition to applications
+                      for Kneser hypergraphs, for complete hypergraphs our methods recover Olson’s generalization of
+                      the EGZ theorem for arbitrary finite groups. Furthermore, we (2) give a fractional generalization
+                      of the EGZ theorem with applications to balanced set families and (3) provide a constrained EGZ
+                      theorem which imposes combinatorial restrictions on zero-sum sequences in the original result.
+                    </p>
+                  </div>
                 </td>
                 <td style="padding:20px;width:25%;vertical-align:middle">
                   <!-- <img src="images/9-cap.png" alt="successor" width="160"> -->
@@ -281,23 +346,27 @@
                   <br>
                   <em>La Matematica</em>, May 2023;
                   <br>
+                  <a href="https://arxiv.org/abs/2212.05353">arXiv</a>
                   <div class="abstract">
-                  <p>
-                    We define a cap in the affine geometry \(\mathrm{AG}(n,2)\) to be a subset in which any collection
-                    of \(4\) points is
-                    in general position.
-                    In this paper, we classify, up to affine equivalence, all caps in \(\mathrm{AG}(n,2)\) of size \(k
-                    \leq 9\). As a
-                    result, we obtain a complete characterization of caps in dimension \(n \leq 6\), in particular
-                    complete
-                    and maximal caps. Since the EvenQuads card deck is a model for \(\mathrm{AG}(6,2)\), as a
-                    consequence, we
-                    determine the probability that an arbitrary \(k\)-card layout contains a quad. </p></div>
+                    <p>
+                      We define a cap in the affine geometry \(\mathrm{AG}(n,2)\) to be a subset in which any collection
+                      of \(4\) points is
+                      in general position.
+                      In this paper, we classify, up to affine equivalence, all caps in \(\mathrm{AG}(n,2)\) of size \(k
+                      \leq 9\). As a
+                      result, we obtain a complete characterization of caps in dimension \(n \leq 6\), in particular
+                      complete
+                      and maximal caps. Since the EvenQuads card deck is a model for \(\mathrm{AG}(6,2)\), as a
+                      consequence, we
+                      determine the probability that an arbitrary \(k\)-card layout contains a quad. </p>
+                  </div>
                 </td>
-                
+
                 <td style="padding:20px;width:25%;vertical-align:middle">
-                  <img src="images/QUADsDeck.png" alt="successor" width="160">
-                  <small> A standard EvenQuads deck of cards.</small>
+                  <div class="abstract">
+                    <img src="images/QUADsDeck.png" alt="successor" width="160">
+                    <small> A standard EvenQuads deck of cards.</small>
+                  </div>
                 </td>
               </tr>
             </tbody>
